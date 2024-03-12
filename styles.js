@@ -3,36 +3,41 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
   },
   backgroundImage: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
-    height: '50%',
+
     resizeMode: 'cover',
+    zIndex: -1,
+  },
+
+  headerContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: 'transparent',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    zIndex: 1,
   },
   backButton: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
     backgroundColor: 'white',
     padding: 10,
     borderRadius: 50,
   },
   shareButton: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
     backgroundColor: 'white',
     padding: 10,
     borderRadius: 50,
   },
-  scrollView: {
-    flex: 1,
-    backgroundColor: 'transparent',
-  },
+
   contentContainer: {
     paddingTop: '80%',
     paddingBottom: 20,
@@ -45,6 +50,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: 20,
     paddingHorizontal: 30,
+  },
+  scrollView: {
+    height: '100%',
+
+    width: '100%',
   },
   titlemain: {
     fontSize: 32,
@@ -78,8 +88,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-
-    marginBottom: 20,
+    marginBottom: 10,
     paddingVertical: 15,
   },
   avatarImage: {
@@ -94,7 +103,6 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 10},
     shadowOpacity: 20,
     shadowRadius: 10,
-    elevation: 3,
   },
   icon: {
     position: 'absolute',
@@ -103,52 +111,19 @@ const styles = StyleSheet.create({
     transform: [{translateX: -12}, {translateY: -12}],
     zIndex: 1,
   },
-  privacyContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  privacyText: {
-    fontSize: 18,
-    color: 'black',
-  },
-  participantsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  agendaContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
 
-  titleWithUnderline: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textDecorationLine: 'underline',
-    marginVertical: 10,
-  },
-  viewButton: {
-    padding: 0,
-  },
-  viewButtonText: {
-    color: 'black',
-    fontSize: 18,
-    textAlign: 'center',
-  },
-  assigneeContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 20,
+  joinButtonContainer: {
+    padding: 20,
+    paddingVertical: 23,
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    backgroundColor: 'white',
   },
   joinButton: {
-    backgroundColor: 'blue',
     padding: 15,
     borderRadius: 30,
     alignItems: 'center',
-    marginTop: 20,
   },
   joinButtonText: {
     color: 'white',
